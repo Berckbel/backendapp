@@ -1,0 +1,19 @@
+meta {
+  name: getCustomerBalance
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://127.0.0.1:8000/api/v1/customer/balance/?external_id=external_01
+  body: none
+  auth: none
+}
+
+query {
+  external_id: external_01
+}
+
+headers {
+  API-KEY: wdaarJyiJMoBRe84Lbj1Eq3da2hbfi6jr53STtb-rLo
+}

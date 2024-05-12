@@ -1,0 +1,19 @@
+meta {
+  name: getLoansByCustomerId
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://127.0.0.1:8000/api/v1/loan/?customer_external_id=external_01
+  body: none
+  auth: none
+}
+
+query {
+  customer_external_id: external_01
+}
+
+headers {
+  API-KEY: wdaarJyiJMoBRe84Lbj1Eq3da2hbfi6jr53STtb-rLo
+}

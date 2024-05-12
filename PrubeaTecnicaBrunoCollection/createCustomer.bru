@@ -1,0 +1,24 @@
+meta {
+  name: createCustomer
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8000/api/v1/customer/
+  body: json
+  auth: none
+}
+
+headers {
+  API-KEY: wdaarJyiJMoBRe84Lbj1Eq3da2hbfi6jr53STtb-rLo
+}
+
+body:json {
+  {
+    "external_id": "external_01",
+    "status": 2,
+    "score": 4000,
+    "preapproved_at": "2023-02-12T22:29:27.177914Z"
+  }
+}

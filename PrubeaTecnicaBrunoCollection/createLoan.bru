@@ -1,0 +1,25 @@
+meta {
+  name: createLoan
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://127.0.0.1:8000/api/v1/loan/
+  body: json
+  auth: none
+}
+
+headers {
+  API-KEY: wdaarJyiJMoBRe84Lbj1Eq3da2hbfi6jr53STtb-rLo
+}
+
+body:json {
+  {
+    "external_id": "external_01-01",
+    "customer_external_id": "external_01",
+    "amount": 500,
+    "outstanding": 500,
+    "status": 0
+  }
+}

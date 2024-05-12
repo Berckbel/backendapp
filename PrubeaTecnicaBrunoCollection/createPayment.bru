@@ -1,0 +1,24 @@
+meta {
+  name: createPayment
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://127.0.0.1:8000/api/v1/payment/
+  body: json
+  auth: none
+}
+
+headers {
+  API-KEY: wdaarJyiJMoBRe84Lbj1Eq3da2hbfi6jr53STtb-rLo
+}
+
+body:json {
+  {
+    "external_id": "external_01",
+    "customer_external_id": "external_01",
+    "loan_external_id": "external_01-01",
+    "payment_amount": 400
+  }
+}
