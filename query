@@ -1,0 +1,5 @@
+-- SQLite
+DELETE FROM loan_loan;
+DELETE FROM customer_customer;
+DELETE FROM payment_payment;
+DELETE FROM payment_paymentdetail;

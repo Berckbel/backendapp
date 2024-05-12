@@ -1,0 +1,45 @@
+# Archivos generados por el sistema operativo
+*.DS_Store
+Thumbs.db
+
+# Directorio virtualenv
+venv/
+env/
+
+# Directorio de archivos estáticos recopilados
+staticfiles/
+
+# Directorio de archivos de medios cargados
+media/
+
+# Archivos de base de datos
+*.sqlite3
+*.db
+
+# Archivos de configuración local
+local_settings.py
+
+# Archivos de caché y sesiones de Django
+__pycache__/
+*.pyc
+
+# Archivos de registro
+*.log
+
+# Archivos de dependencias
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos de respaldo
+*.bak
+*.swp
+*~
+.#*
+
+# Archivos de configuración de PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+*.bak
+*.orig
