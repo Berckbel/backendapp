@@ -3,7 +3,7 @@ All requirements were completed.
 
 1. Customer endpoints
 2. Loan Endpoints
-3. Pyament and Payment Detail Endpints.
+3. Pyament and Payment Detail Endpoints.
 
 ## Swagger
 
