@@ -23,6 +23,7 @@ class LoanView(APIView):
         operation_description="Get loans for a customer",
         manual_parameters=[
             openapi.Parameter('customer_external_id', openapi.IN_QUERY, description="Customer external ID", type=openapi.TYPE_STRING),
+            openapi.Parameter('API-KEY', openapi.IN_HEADER, description="API Key", type=openapi.TYPE_STRING),
         ],
         responses={200: LoanSerializer(many=True)}
     )
@@ -46,6 +47,9 @@ class LoanView(APIView):
         
     @swagger_auto_schema(
         operation_description="Create a new loan",
+         manual_parameters=[
+            openapi.Parameter('API-KEY', openapi.IN_HEADER, description="API Key", type=openapi.TYPE_STRING),
+        ],
         request_body=openapi.Schema(
             type=openapi.TYPE_OBJECT,
             properties={

@@ -24,6 +24,7 @@ class PaymentView(APIView):
         operation_description="Get payments for a customer",
         manual_parameters=[
             openapi.Parameter('customer_external_id', openapi.IN_QUERY, description="Customer external ID", type=openapi.TYPE_STRING),
+            openapi.Parameter('API-KEY', openapi.IN_HEADER, description="API Key", type=openapi.TYPE_STRING),
         ],
         responses={200: PaymentSerializer(many=True)}
     )
@@ -49,6 +50,9 @@ class PaymentView(APIView):
 
     @swagger_auto_schema(
         operation_description="Create a new payment",
+        manual_parameters=[
+            openapi.Parameter('API-KEY', openapi.IN_HEADER, description="API Key", type=openapi.TYPE_STRING),
+        ],
         request_body=openapi.Schema(
             type=openapi.TYPE_OBJECT,
             properties={

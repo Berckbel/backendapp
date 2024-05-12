@@ -25,6 +25,7 @@ class CustomerView(APIView):
         operation_description="Get customer details",
         manual_parameters=[
             openapi.Parameter('external_id', openapi.IN_QUERY, description="Customer external ID", type=openapi.TYPE_STRING),
+            openapi.Parameter('API-KEY', openapi.IN_HEADER, description="API Key", type=openapi.TYPE_STRING),
         ],
         responses={200: CustomerSerializer()}
     )
@@ -47,6 +48,9 @@ class CustomerView(APIView):
 
     @swagger_auto_schema(
         operation_description="Create a new customer",
+        manual_parameters=[
+            openapi.Parameter('API-KEY', openapi.IN_HEADER, description="API Key", type=openapi.TYPE_STRING),
+        ],
         request_body=openapi.Schema(
             type=openapi.TYPE_OBJECT,
             properties={
@@ -90,6 +94,7 @@ class CustomerView(APIView):
     operation_description="Get the balance for a customer",
     manual_parameters=[
         openapi.Parameter('external_id', openapi.IN_QUERY, description="Customer external ID", type=openapi.TYPE_STRING),
+        openapi.Parameter('API-KEY', openapi.IN_HEADER, description="API Key", type=openapi.TYPE_STRING),
     ],
     responses={200: openapi.Schema(
         type=openapi.TYPE_OBJECT,
