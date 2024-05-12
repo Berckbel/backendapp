@@ -22,6 +22,6 @@ All requirements were completed.
 
 ###### Or you just can use docker : )
 
-###### You can followme in linkedin and my personal web
+###### You can follow me in linkedin and my personal web
 [Berckbel](http://www.berckbel.com "Berckbel")
 [Linkedin](http://www.linkedin.com/in/raul-mogollon-49a24a278 "Linkedin")
